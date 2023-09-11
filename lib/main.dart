@@ -1,29 +1,22 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
+import 'package:tecnoguarda/registro.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: LoginPage(),
       theme: ThemeData(
         primaryColor: Colors.blue,
-        appBarTheme: AppBarTheme(
-          color: Colors.red, // Color de fondo de la AppBar (rojo)
-        ),
+        cardColor: Colors.red,
       ),
     );
   }
 }
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,9 +49,20 @@ class LoginPage extends StatelessWidget {
                   // Agregar lógica de inicio de sesión aquí
                 },
                 style: ElevatedButton.styleFrom(
-                  foregroundColor: Colors.black, backgroundColor: Colors.yellow, // Color del texto del botón
+                  primary: Theme.of(context).cardColor,
+                  onPrimary: Colors.black,
                 ),
                 child: Text('Iniciar sesión'),
+              ),
+              SizedBox(height: 12.0),
+              TextButton(
+                onPressed: () {
+                  // Navegar a la pantalla de registro y reemplazar la pantalla de inicio de sesión
+                  Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (context) => RegistroPage()),
+                  );
+                },
+                child: Text('Crear cuenta'),
               ),
             ],
           ),
