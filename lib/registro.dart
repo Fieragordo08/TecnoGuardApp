@@ -3,8 +3,6 @@ import 'package:tecnoguarda/main.dart'; // Asegúrate de importar el archivo cor
 
 
 class RegistroPage extends StatelessWidget {
-
-  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   
   @override
   Widget build(BuildContext context) {
@@ -18,7 +16,7 @@ class RegistroPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Text(
-              '¡Bienvenido!',
+              '¡Ingresa tus datos!',
               style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 16.0),
