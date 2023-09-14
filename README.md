@@ -9,5 +9,3 @@ Se clono en C:\Users\TuUsuario\aqui
 
 Ese se puede abrir en vs code, aquí descarguen la extensión de git graph.
 #
-
-Que pasa si modifico esto?
